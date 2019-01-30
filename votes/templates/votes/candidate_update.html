@@ -1,13 +1,16 @@
 {% extends "votes/base.html" %}
+{% load crispy_forms_tags %}
 
 {% block head %}
 	Update Candidate Details
 {% endblock head %}
 
 {% block body %}
+	<a href="{% url 'index' %}">Home </a> 
+	<br>
 	<form method="post">
 		{% csrf_token %}
-   		{{ form.as_p }}
+   		{{ form|crispy }}
    		<input type="submit" value="Update">
 	</form>
 {% endblock body %}

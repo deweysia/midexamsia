@@ -8,7 +8,7 @@
 	{% for candidate in candidates %}
 		{{ candidate.position }} : 
 		{{ candidate }} 
-		{{ candidate.vote_set.count }} 
+		| Votes: {{ candidate.vote_set.count }} 
 		<a href="{% url 'candidate_detail' candidate.id %}">More details</a>
 		<br><br>
 	{% endfor %}
