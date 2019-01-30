@@ -26,7 +26,6 @@ class Candidate(models.Model):
 	class Meta:
 		verbose_name = "Candidate"
 		verbose_name_plural = "Candidates"
-		ordering = ['position__name']
 
 
 	def __str__(self):

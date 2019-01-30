@@ -11,6 +11,8 @@ class CandidateListView(ListView):
 	template_name = "votes/index.html"
 	context_object_name = 'candidates'
 
+	def get_queryset(self):
+		return Candidate.objects.order_by('position__name')
 
 class CandidateDetailView(DetailView):
 	model = Candidate
